@@ -24,7 +24,7 @@ func (s *Sum) Inject(SubTaskAdder) func(context.Context) error {
 }
 
 func (s *Sum) Task() *Task {
-	return NewTask(s)
+	return task.NewTask(s)
 }
 
 func main() {
@@ -72,7 +72,7 @@ func (ms *MulSum) Inject(adder SubTaskAdder) func(context.Context) error {
 }
 
 func (ms *MulSum) Task() *Task {
-	return NewTask(ms)
+	return task.NewTask(ms)
 }
 
 func main() {
